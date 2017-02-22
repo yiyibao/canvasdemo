@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid #f66;
+				display: block;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500">
+			您老的浏览器该换啦！
+		</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		
+		ctx.strokeStyle = "#f66";
+		ctx.lineWidth = 1;
+		ctx.moveTo(50,50);
+		ctx.lineTo(50,450);
+		ctx.stroke();
+		ctx.moveTo(450,50);
+		ctx.lineTo(450,450);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = "#00f";
+		ctx.lineCap = "butt"
+		ctx.lineWidth = 15;
+		ctx.moveTo(50,100);
+		ctx.lineTo(450,100);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = "#00f";
+		ctx.lineCap = "round"
+		ctx.lineWidth = 15;
+		ctx.moveTo(50,250);
+		ctx.lineTo(450,250);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle = "#00f";
+		ctx.lineCap = "square"
+		ctx.lineWidth = 15;
+		ctx.moveTo(50,400);
+		ctx.lineTo(450,400);
+		ctx.stroke();
+	</script>
+</html>

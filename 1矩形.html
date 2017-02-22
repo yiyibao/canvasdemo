@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas{
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500">
+			您老的浏览器该换啦！
+		</canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		
+		ctx.fillStyle = "#f66";
+		ctx.rect(100,100,100,100);
+		ctx.fill();
+		
+		ctx.beginPath();//重新开始
+		
+		ctx.strokeStyle="#00f";
+		ctx.rect(100,300,100,100);
+		ctx.stroke();
+		
+		ctx.beginPath();//重新开始
+		ctx.fillStyle = "#f66";
+		ctx.fillRect(300,100,100,100);
+		
+		ctx.beginPath();//重新开始
+		ctx.strokeStyle="#00f";
+		ctx.strokeRect(300,300,100,100);
+		
+		//橡皮擦
+		ctx.clearRect(150,150,200,200)
+		
+		ctx.beginPath();//重新开始
+		ctx.fillStyle = "#0F0";
+		ctx.fillRect(150,150,100,100);
+	</script>
+</html>
